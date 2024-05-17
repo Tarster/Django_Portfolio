@@ -9,7 +9,9 @@ All Reviews
     <ul>
         {% for review in reviews %}
             <li>
+                <a href="{% url "review" review.id %}">
                 {{ review.user_name }}: {{ review.review_text }}
+            </a>
             </li>
         {% endfor %}
     </ul>
